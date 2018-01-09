@@ -36,6 +36,8 @@ final class DefaultCatalogWireframe: CatalogWireframe {
     }
     
     func goToSimpleExampleScreen() {
+        let next = SimpleViewController()
+        nav?.pushViewController(next, animated: true)
     }
     
     func goToSharedModelExampleScreen() {

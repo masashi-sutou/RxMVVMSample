@@ -21,8 +21,7 @@ final class CatalogViewController: UIViewController {
     
     init(dependency: Dependency) {
         self.dependency = dependency
-        self.tableView = UITableView(frame: .zero, style: .plain)
-        self.tableView.tableFooterView = UIView()
+        self.tableView = UITableView(frame: .zero, style: .grouped)
         super.init(nibName: nil, bundle: nil)
     }
     
