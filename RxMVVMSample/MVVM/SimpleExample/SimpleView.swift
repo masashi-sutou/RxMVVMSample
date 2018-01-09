@@ -23,6 +23,8 @@ final class SimpleView: UIView {
 
         input.placeholder = "Please enter text."
         input.textAlignment = .center
+        input.keyboardType = .alphabet
+        input.autocorrectionType = .no
         input.autocapitalizationType = .none
         input.borderStyle = .roundedRect
         input.translatesAutoresizingMaskIntoConstraints = false
