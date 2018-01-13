@@ -123,9 +123,9 @@
 		0B0EE54D2006869100BD980E /* Selected */ = {
 			isa = PBXGroup;
 			children = (
-				0B0EE5862009FEF500BD980E /* ViewModel */,
-				0B0EE5812009F8DB00BD980E /* View */,
 				0B0EE5782007DC3C00BD980E /* Controller */,
+				0B0EE5812009F8DB00BD980E /* View */,
+				0B0EE5862009FEF500BD980E /* ViewModel */,
 			);
 			path = Selected;
 			sourceTree = "<group>";
@@ -133,12 +133,12 @@
 		0B0EE54E2006869D00BD980E /* Selecting */ = {
 			isa = PBXGroup;
 			children = (
+				0B0EE55920068AAC00BD980E /* Controller */,
 				0B0EE56020068CE200BD980E /* Wireframe */,
-				0B0EE55D20068AE300BD980E /* Model */,
-				0B0EE55C20068AC900BD980E /* Repository */,
 				0B0EE55B20068AC200BD980E /* View */,
 				0B0EE55A20068ABB00BD980E /* ViewModel */,
-				0B0EE55920068AAC00BD980E /* Controller */,
+				0B0EE55D20068AE300BD980E /* Model */,
+				0B0EE55C20068AC900BD980E /* Repository */,
 			);
 			path = Selecting;
 			sourceTree = "<group>";
@@ -282,8 +282,8 @@
 		0BE5B8F61FFFE8F700C99F8F /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				0BE5B8F71FFFE92F00C99F8F /* CatalogWireframe.swift */,
 				0BE5B8F91FFFEA4200C99F8F /* CatalogViewController.swift */,
+				0BE5B8F71FFFE92F00C99F8F /* CatalogWireframe.swift */,
 				0BE5B9121FFFEC0300C99F8F /* CatalogViewModel.swift */,
 				0BE5B9141FFFEE0C00C99F8F /* ExampleScreenCell.swift */,
 				0BE5B9161FFFEE4A00C99F8F /* ExampleScreen.swift */,
@@ -306,8 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				0BE5B919200522FD00C99F8F /* SimpleViewController.swift */,
-				0BE5B91D200523E400C99F8F /* SimpleViewModel.swift */,
 				0BE5B91B2005237C00C99F8F /* SimpleView.swift */,
+				0BE5B91D200523E400C99F8F /* SimpleViewModel.swift */,
 			);
 			path = SimpleExample;
 			sourceTree = "<group>";
