@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow()
         self.window = window
         
-        let wireframe = DefaultCatalogWireframe.bootstrap(on: window)
+        let wireframe = CatalogWireframe.bootstrap(on: window)
         wireframe.goToCatalogScreen()
         return true
     }

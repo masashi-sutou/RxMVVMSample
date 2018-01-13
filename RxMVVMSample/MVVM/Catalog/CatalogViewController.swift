@@ -12,7 +12,7 @@ import RxCocoa
 
 final class CatalogViewController: UIViewController {
 
-    typealias Dependency = CatalogWireframe
+    typealias Dependency = CatalogWireframeable
     
     private let dependency: Dependency
     private let tableView: UITableView
@@ -48,17 +48,9 @@ final class CatalogViewController: UIViewController {
         
         viewModel
             .screens
-            .drive(tableView.rx.items(cellIdentifier: ExampleScreenCell.reuseIdentifier, cellType: ExampleScreenCell.self)) { _, screen, cell in
+            .drive(tableView.rx.items(cellIdentifier: ExampleScreenCell.reuseIdentifier, cellType: ExampleScreenCell.self), curriedArgument: { _, screen, cell in
                 cell.screen = screen
-            }
+            })
             .disposed(by: disposeBag)
-        
-//        // 引数省略しないバージョン
-//        viewModel
-//            .screens
-//            .drive(tableView.rx.items(cellIdentifier: ExampleScreenCell.reuseIdentifier, cellType: ExampleScreenCell.self), curriedArgument: { _, screen, cell in
-//                cell.screen = screen
-//            })
-//            .disposed(by: disposeBag)
     }
 }

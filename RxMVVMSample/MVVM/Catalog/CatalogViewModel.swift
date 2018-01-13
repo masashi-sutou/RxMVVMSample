@@ -17,7 +17,7 @@ final class CatalogViewModel {
     let screenRelay: RxCocoa.BehaviorRelay<[ExampleScreen]>
     let screens: RxCocoa.Driver<[ExampleScreen]>
     
-    init(input indexSelected: Input, dependency wireframe: CatalogWireframe) {
+    init(input indexSelected: Input, dependency wireframe: CatalogWireframeable) {
         
         let screenRelay = BehaviorRelay(value: ExampleScreen.all)
         

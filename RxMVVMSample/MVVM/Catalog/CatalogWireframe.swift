@@ -1,5 +1,5 @@
 //
-//  DefaultCatalogWireframe.swift
+//  CatalogWireframe.swift
 //  RxMVVMSample
 //
 //  Created by 須藤将史 on 2018/01/06.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-protocol CatalogWireframe {
+protocol CatalogWireframeable {
     func goToCatalogScreen()
     func goToSimpleExampleScreen()
     func goToSharedModelExampleScreen()
     func goToHierarchalViewModelExampleScreen()
 }
 
-final class DefaultCatalogWireframe: CatalogWireframe {
+final class CatalogWireframe: CatalogWireframeable {
     
     private weak var nav: UINavigationController?
     
-    class func bootstrap(on window: UIWindow) -> DefaultCatalogWireframe {
+    class func bootstrap(on window: UIWindow) -> CatalogWireframe {
         let nav = UINavigationController()
         window.rootViewController = nav
         window.makeKeyAndVisible()
-        return DefaultCatalogWireframe(on: nav)
+        return CatalogWireframe(on: nav)
     }
     
     private init(on navigationController: UINavigationController) {
@@ -41,6 +41,18 @@ final class DefaultCatalogWireframe: CatalogWireframe {
     }
     
     func goToSharedModelExampleScreen() {
+        let allBadgesModel = AllBadgesModel(gettingBadgesvia: BadgesDummyRepository())
+        let selectedBadgesModel = SelectedBadgesModel(selected: [])
+        
+        let next = BadgeSelectorViewController(dependency: (
+            selectedBadgesModel: selectedBadgesModel,
+            selectableBadgesModel: SelectableBadgesModel(dependency: (
+                allModel: allBadgesModel,
+                selectedModel: selectedBadgesModel))
+            )
+        )
+        
+        nav?.pushViewController(next, animated: true)
     }
     
     func goToHierarchalViewModelExampleScreen() {
