@@ -26,7 +26,7 @@ final class AllBadgesModel: AllBadgesModelable {
         return entityModel.currentState
     }
     
-    init<Repository: BadgesRepositorable>(gettingBadgesvia repository: Repository) where Repository.P == Void, Repository.V == [Badge], Repository.E == Never {
+    init<Repository: BadgesRepositorable>(gettingBadges repository: Repository) where Repository.P == Void, Repository.V == [Badge], Repository.E == Never {
         self.entityModel = EntityModel<Void, [Badge], Never>(startingWith: .sleeping, gettingEntityBy: repository)
         self.stateDidChange = entityModel.stateDidChange
         self.entityModel.get(by: ())

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol BadgesRepositorable: EntityModelRepositorable {
     associatedtype P = Void
