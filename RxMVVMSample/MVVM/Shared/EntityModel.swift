@@ -30,7 +30,7 @@ final class EntityModel<Parameters, Value, Reason> {
         }
     }
     
-    init<Repository: EntityModelRepositorable>(startingWith initialState: EntityModelState<P, V, E>, gettingEntityBy repository: Repository) where Repository.P == Parameters, Repository.V == Value, Repository.E == Reason {
+    init<Repository: EntityModelRepositorable>(startingWith initialState: EntityModelState<P, V, E>, entity repository: Repository) where Repository.P == Parameters, Repository.V == Value, Repository.E == Reason {
         self.stateMachine = StateMachine(startingWith: initialState)
         self.stateDidChange = stateMachine.stateDidChange
         self.repository = repository.asAny()
