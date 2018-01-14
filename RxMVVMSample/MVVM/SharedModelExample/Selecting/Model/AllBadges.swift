@@ -1,5 +1,5 @@
 //
-//  AllBadgesModel.swift
+//  AllBadges.swift
 //  RxMVVMSample
 //
 //  Created by 須藤将史 on 2018/01/11.
@@ -16,7 +16,7 @@ protocol AllBadgesModelable {
     var currentState: State { get }
 }
 
-final class AllBadgesModel: AllBadgesModelable {
+final class AllBadges: AllBadgesModelable {
     private let entityModel: EntityModel<Void, [Badge], Never>
     private let disposeBag = RxSwift.DisposeBag()
     

@@ -41,12 +41,12 @@ final class CatalogWireframe: CatalogWireframeable {
     }
     
     func goToSharedModelExampleScreen() {
-        let allBadgesModel = AllBadgesModel(badges: BadgesDummyRepository())
-        let selectedBadgesModel = SelectedBadgesModel(selected: [])
+        let allBadgesModel = AllBadges(badges: BadgesDummyRepository())
+        let selectedBadgesModel = SelectedBadges(selected: [])
         
         let next = BadgeSelectorViewController(dependency: (
             selectedBadgesModel: selectedBadgesModel,
-            selectableBadgesModel: SelectableBadgesModel(dependency: (
+            selectableBadgesModel: SelectableBadges(dependency: (
                 allModel: allBadgesModel,
                 selectedModel: selectedBadgesModel))
             )

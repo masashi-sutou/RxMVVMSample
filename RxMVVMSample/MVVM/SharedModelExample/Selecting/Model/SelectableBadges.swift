@@ -1,5 +1,5 @@
 //
-//  SelectableBadgesModel.swift
+//  SelectableBadges.swift
 //  RxMVVMSample
 //
 //  Created by 須藤将史 on 2018/01/11.
@@ -14,7 +14,7 @@ protocol SelectableBadgesModelable {
     var currentSelectableBadges: [Badge] { get }
 }
 
-final class SelectableBadgesModel: SelectableBadgesModelable {
+final class SelectableBadges: SelectableBadgesModelable {
     typealias Dependency = (
         allModel: AllBadgesModelable,
         selectedModel: SelectedBadgesModelable
@@ -35,7 +35,7 @@ final class SelectableBadgesModel: SelectableBadgesModelable {
         /*
          MARK: Use a BehaviorRelay because this model has a synchronous getter for selected badges.
          */
-        let relay = RxCocoa.BehaviorRelay(value: SelectableBadgesModel.dropSelected(from: dependency.allModel.currentState.value ?? [], without: Set(dependency.selectedModel.currentSelection)
+        let relay = RxCocoa.BehaviorRelay(value: SelectableBadges.dropSelected(from: dependency.allModel.currentState.value ?? [], without: Set(dependency.selectedModel.currentSelection)
         ))
         self.selectableBadgesRealy = relay
         self.selectableBadgesDidChange = relay.asDriver()
@@ -45,7 +45,7 @@ final class SelectableBadgesModel: SelectableBadgesModelable {
             )
             .map { tuple -> [Badge] in
                 let (allBadgesModelState, selectedBadges) = tuple
-                return SelectableBadgesModel.dropSelected(from: allBadgesModelState.value ?? [], without: Set(selectedBadges)
+                return SelectableBadges.dropSelected(from: allBadgesModelState.value ?? [], without: Set(selectedBadges)
                 )
             }
             .drive(selectableBadgesRealy)

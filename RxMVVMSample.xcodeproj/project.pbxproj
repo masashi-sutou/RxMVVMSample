@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0B0EE5502006870B00BD980E /* BadgeSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE54F2006870B00BD980E /* BadgeSelectorViewController.swift */; };
-		0B0EE5522006875D00BD980E /* SelectedBadgesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE5512006875D00BD980E /* SelectedBadgesModel.swift */; };
+		0B0EE5522006875D00BD980E /* SelectedBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE5512006875D00BD980E /* SelectedBadges.swift */; };
 		0B0EE554200687C600BD980E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE553200687C600BD980E /* Badge.swift */; };
-		0B0EE556200688D700BD980E /* SelectableBadgesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE555200688D700BD980E /* SelectableBadgesModel.swift */; };
+		0B0EE556200688D700BD980E /* SelectableBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE555200688D700BD980E /* SelectableBadges.swift */; };
 		0B0EE55820068A1100BD980E /* BadgeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE55720068A1100BD980E /* BadgeSelectorView.swift */; };
 		0B0EE55F20068C7300BD980E /* BadgesSelectorScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE55E20068C7300BD980E /* BadgesSelectorScreenViewModel.swift */; };
 		0B0EE56220068CF000BD980E /* BadgeSelectorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE56120068CF000BD980E /* BadgeSelectorWireframe.swift */; };
 		0B0EE56420068FE000BD980E /* SelectedBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE56320068FE000BD980E /* SelectedBadgesViewModel.swift */; };
 		0B0EE566200692A500BD980E /* SelectableBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE565200692A500BD980E /* SelectableBadgesViewModel.swift */; };
 		0B0EE5692006970800BD980E /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE5682006970800BD980E /* StateMachine.swift */; };
-		0B0EE56B20069EC900BD980E /* AllBadgesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE56A20069EC900BD980E /* AllBadgesModel.swift */; };
+		0B0EE56B20069EC900BD980E /* AllBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE56A20069EC900BD980E /* AllBadges.swift */; };
 		0B0EE56D2007C27200BD980E /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE56C2007C27200BD980E /* EntityModel.swift */; };
 		0B0EE56F2007C5CD00BD980E /* EntityModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE56E2007C5CD00BD980E /* EntityModelRepository.swift */; };
 		0B0EE5712007C71900BD980E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EE5702007C71900BD980E /* Result.swift */; };
@@ -52,16 +52,16 @@
 
 /* Begin PBXFileReference section */
 		0B0EE54F2006870B00BD980E /* BadgeSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSelectorViewController.swift; sourceTree = "<group>"; };
-		0B0EE5512006875D00BD980E /* SelectedBadgesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBadgesModel.swift; sourceTree = "<group>"; };
+		0B0EE5512006875D00BD980E /* SelectedBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBadges.swift; sourceTree = "<group>"; };
 		0B0EE553200687C600BD980E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
-		0B0EE555200688D700BD980E /* SelectableBadgesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableBadgesModel.swift; sourceTree = "<group>"; };
+		0B0EE555200688D700BD980E /* SelectableBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableBadges.swift; sourceTree = "<group>"; };
 		0B0EE55720068A1100BD980E /* BadgeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSelectorView.swift; sourceTree = "<group>"; };
 		0B0EE55E20068C7300BD980E /* BadgesSelectorScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesSelectorScreenViewModel.swift; sourceTree = "<group>"; };
 		0B0EE56120068CF000BD980E /* BadgeSelectorWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSelectorWireframe.swift; sourceTree = "<group>"; };
 		0B0EE56320068FE000BD980E /* SelectedBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBadgesViewModel.swift; sourceTree = "<group>"; };
 		0B0EE565200692A500BD980E /* SelectableBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableBadgesViewModel.swift; sourceTree = "<group>"; };
 		0B0EE5682006970800BD980E /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
-		0B0EE56A20069EC900BD980E /* AllBadgesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBadgesModel.swift; sourceTree = "<group>"; };
+		0B0EE56A20069EC900BD980E /* AllBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBadges.swift; sourceTree = "<group>"; };
 		0B0EE56C2007C27200BD980E /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		0B0EE56E2007C5CD00BD980E /* EntityModelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModelRepository.swift; sourceTree = "<group>"; };
 		0B0EE5702007C71900BD980E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -185,9 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				0B0EE553200687C600BD980E /* Badge.swift */,
-				0B0EE56A20069EC900BD980E /* AllBadgesModel.swift */,
-				0B0EE555200688D700BD980E /* SelectableBadgesModel.swift */,
-				0B0EE5512006875D00BD980E /* SelectedBadgesModel.swift */,
+				0B0EE56A20069EC900BD980E /* AllBadges.swift */,
+				0B0EE555200688D700BD980E /* SelectableBadges.swift */,
+				0B0EE5512006875D00BD980E /* SelectedBadges.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,11 +424,11 @@
 				0BE5B91C2005237C00C99F8F /* SimpleView.swift in Sources */,
 				0B0EE57C2007DE2E00BD980E /* BadgesConstantRepository.swift in Sources */,
 				0B0EE55820068A1100BD980E /* BadgeSelectorView.swift in Sources */,
-				0B0EE5522006875D00BD980E /* SelectedBadgesModel.swift in Sources */,
+				0B0EE5522006875D00BD980E /* SelectedBadges.swift in Sources */,
 				0B0EE56220068CF000BD980E /* BadgeSelectorWireframe.swift in Sources */,
 				0B0EE5732007CF8E00BD980E /* BadgesRepositorable.swift in Sources */,
-				0B0EE556200688D700BD980E /* SelectableBadgesModel.swift in Sources */,
-				0B0EE56B20069EC900BD980E /* AllBadgesModel.swift in Sources */,
+				0B0EE556200688D700BD980E /* SelectableBadges.swift in Sources */,
+				0B0EE56B20069EC900BD980E /* AllBadges.swift in Sources */,
 				0B0EE55F20068C7300BD980E /* BadgesSelectorScreenViewModel.swift in Sources */,
 				0B0EE56420068FE000BD980E /* SelectedBadgesViewModel.swift in Sources */,
 				0BE5B91A200522FD00C99F8F /* SimpleViewController.swift in Sources */,

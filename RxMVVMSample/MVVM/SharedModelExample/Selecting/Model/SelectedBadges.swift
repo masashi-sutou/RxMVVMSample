@@ -1,5 +1,5 @@
 //
-//  SelectedBadgesModel.swift
+//  SelectedBadges.swift
 //  RxMVVMSample
 //
 //  Created by 須藤将史 on 2018/01/11.
@@ -20,7 +20,7 @@ protocol SelectedBadgesModelable {
     func deselect(badge: Badge)
 }
 
-final class SelectedBadgesModel: SelectedBadgesModelable {
+final class SelectedBadges: SelectedBadgesModelable {
     
     private let stateMachine: StateMachine<[Badge]>
     private let badgeDidSelectRelay: RxCocoa.PublishRelay<Badge>
