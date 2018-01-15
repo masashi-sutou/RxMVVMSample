@@ -39,15 +39,17 @@ final class CatalogViewController: UIViewController {
         
         ExampleScreenCell.register(to: tableView)
         
-        let input: RxCocoa.Signal<Int> = tableView.rx.itemSelected.do(onNext: { [weak self] indexPath in
-            guard let me = self else { return }
-            me.tableView.deselectRow(at: indexPath, animated: true)
-        }).map { indexPath in indexPath.row }.asSignal(onErrorSignalWith: .empty())
+        let input: RxCocoa.Signal<Int> = tableView.rx
+            .itemSelected.do(onNext: { [weak self] indexPath in
+                guard let me = self else { return }
+                me.tableView.deselectRow(at: indexPath, animated: true)
+            })
+            .map { indexPath in indexPath.row }
+            .asSignal(onErrorSignalWith: .empty())
         let viewModel = CatalogViewModel(input: input, dependency: dependency)
         self.viewModel = viewModel
         
-        viewModel
-            .screens
+        viewModel.screens
             .drive(tableView.rx.items(cellIdentifier: ExampleScreenCell.reuseIdentifier, cellType: ExampleScreenCell.self), curriedArgument: { _, screen, cell in
                 cell.screen = screen
             })
