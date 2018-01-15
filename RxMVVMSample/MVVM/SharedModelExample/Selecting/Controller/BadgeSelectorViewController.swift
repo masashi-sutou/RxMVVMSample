@@ -44,7 +44,7 @@ final class BadgeSelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewModel = BadgesSelectorScreenViewModel(
+        let screenViewModel = BadgesSelectorScreenViewModel(
             input: (
                 doneTap: doneButton.rx
                     .tap
@@ -62,7 +62,7 @@ final class BadgeSelectorViewController: UIViewController {
                 wireframe: BadgeSelectorWireframe(on: self)
             )
         )
-        self.viewModel = viewModel // MARK: Prevent removing by ARC.
+        self.viewModel = screenViewModel // MARK: Prevent removing by ARC.
         
         let selectedDataSource = RxCollectionViewSectionedAnimatedDataSource<RxDataSources.AnimatableSectionModel<String, Badge>>(configureCell: { (dataSource, collectionView, indexPath, badge) -> UICollectionViewCell in
             return BadgeCell.dequeue(from: collectionView, for: indexPath, badge: badge)
@@ -70,14 +70,14 @@ final class BadgeSelectorViewController: UIViewController {
             return UICollectionViewCell()
         })
         
-        viewModel.selectedViewModel.selectedBadges
+        screenViewModel.selectedViewModel.selectedBadges
             .map { badges in
                 [RxDataSources.AnimatableSectionModel(model: "Selected", items: badges)]
             }
             .drive(mainView.selectedCollectionView.rx.items(dataSource: selectedDataSource))
             .disposed(by: disposeBag)
         
-        viewModel.selectedViewModel.badgeDidDeselect
+        screenViewModel.selectedViewModel.badgeDidDeselect
             .emit(onNext: { [weak self] badge in
                 guard let me = self else { return }
                 DispatchQueue.main.async {
@@ -92,14 +92,14 @@ final class BadgeSelectorViewController: UIViewController {
             UICollectionViewCell()
         })
         
-        viewModel.selectableViewModel.selectableBadges
+        screenViewModel.selectableViewModel.selectableBadges
             .map { badges in
                 [RxDataSources.AnimatableSectionModel(model: "Selectable", items: badges)]
             }
             .drive(mainView.selectableCollectionView.rx.items(dataSource: selectableDataSource))
             .disposed(by: disposeBag)
         
-        viewModel.completionViewModel
+        screenViewModel.completionViewModel
             .canComplete
             .drive(doneButton.rx.isEnabled)
             .disposed(by: disposeBag)
